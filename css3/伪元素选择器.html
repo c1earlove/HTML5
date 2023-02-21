@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        /* 
+            伪元素：表示页面中一些特殊的并不真实存在的元素（特殊位置）
+                伪元素使用::开头
+                ::first-letter 第一个字母
+                ::first-line 第一行
+                ::selection 选中内容
+                ::before 元素的开始
+                ::after 元素的最后
+                    before 和 after 必须结合content属性来使用
+        */
+        p::first-letter{
+            font-size: 30px;
+            color: magenta;
+        }
+        p::first-line{
+            background-color: aqua;
+        }
+        p::selection{
+            color: red;
+            background-color: blue;
+        }
+        div::before{
+            content: "你好";
+            color: red;
+        }
+        div::after{
+            content: "中国";
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>hellow i love China</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et pariatur saepe perspiciatis dolores earum minus laboriosam mollitia! Doloribus consectetur voluptatum itaque et laboriosam dicta animi perferendis soluta eos est!</p>
+</body>
+</html>
